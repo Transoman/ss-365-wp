@@ -1,0 +1,70 @@
+.header
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 10
+  +trans
+  &.fixed
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    background-color: $dark
+    animation: slideDown 0.4s ease-in-out
+  &__top
+    position: relative
+    padding: 15px 0 20px
+    +r(992)
+      padding: 15px 0
+    .container
+      position: relative
+      display: flex
+      align-items: center
+  &__bottom
+    +trans
+    &.fixed
+      position: fixed
+      top: 0
+      right: 0
+      left: 0
+      background-color: $dark
+  &__col
+    &--phone
+      width: 25%
+      padding-left: 30px
+      +r(992)
+        padding-left: 0
+      +r(767)
+        width: auto
+        margin-left: auto
+        padding-right: 20px
+        order: 2
+      +r(480)
+        padding-right: 50px
+      a
+        font-size: 14px
+        font-weight: 500
+        color: #fff
+        &:hover, &:focus
+          color: $accent
+    &--logo
+      width: 50%
+      +r(767)
+        width: auto
+        order: 1
+    &--city
+      width: 25%
+      padding-right: 30px
+      text-align: right
+      +r(992)
+        padding-right: 50px
+      +r(767)
+        width: auto
+        order: 3
+      +r(480)
+        display: none
+  &__logo
+    justify-content: center
+    +r(767)
+      justify-content: flex-start

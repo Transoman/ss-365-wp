@@ -1,0 +1,146 @@
+*,
+*:before,
+*:after
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+/* Clearfix for float elements */
+.clearfix:before,
+.clearfix:after
+  content: ''
+  display: table
+
+.clearfix:after 
+  clear: both
+
+.clearfix
+  zoom: 1 /* For IE 6/7 hasLayout */
+
+
+/* Common styles */
+html
+  height: 100%
+
+body
+  margin: 0
+  padding: 0
+  height: 100%
+  min-width: 320px
+  font-family: $main-font
+  font-size: 16px
+  line-height: 1.25
+  color: $main-color
+  overflow-x: hidden
+  background-color: #FCFAF7
+
+img
+  max-width: 100%
+  height: auto
+
+a
+  color: $dark
+  +trans
+  &:hover, &:focus
+    color: $accent
+    outline: none
+    text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+  color: $dark
+  letter-spacing: 0.05em
+  text-transform: uppercase
+
+h1
+  font-size: 54px
+  +r(992)
+    font-size: 44px
+  +r(767)
+    font-size: 30px
+
+h2
+  font-size: 30px
+  font-weight: 500
+  +r(767)
+    font-size: 23px
+
+h3
+  font-size: 16px
+  font-weight: 500
+
+section
+  padding: 100px 0
+  +r(767)
+    padding: 40px 0
+
+/* Hidden element */
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+/* Buttons */
+.btn
+  display: inline-block
+  vertical-align: middle
+  min-width: 280px
+  padding: 17px 30px
+  font-family: $din-cond-font
+  font-size: 20px
+  font-weight: 700
+  color: #fff
+  text-align: center
+  background-color: $accent
+  background-image: linear-gradient($orange, $dark-orange)
+  border: 0
+  outline: none
+  text-decoration: none
+  cursor: pointer
+  user-select: none
+  transition: all .25s ease
+  text-transform: uppercase
+  border-radius: 50px
+  box-shadow: 0 10px 30px rgba(227, 89, 48, 0.5)
+  +r(767)
+    min-width: auto
+  &:hover
+    background-color: lighten($accent, 5%)
+    background-image: linear-gradient(lighten($orange, 5%), $dark-orange)
+    color: #fff
+  &:focus
+    background-color: darken($accent, 5%)
+    background-image: linear-gradient($dark-orange, $dark-orange)
+    color: #fff
+    outline: none
+  &[disabled]
+    background-color: #e5e5e5
+    cursor: not-allowed
+    color: #fff
+
+.wrapper
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.content
+  flex: 1 0 auto
+
+.section-header
+  margin-bottom: 80px
+  text-align: center
+  +r(767)
+    margin-bottom: 30px
+  .section-title
+    margin-bottom: 10px
+  p
+    &:last-child
+      margin-bottom: 0
+
+.section-descr
+  margin-bottom: 0
+  text-align: center

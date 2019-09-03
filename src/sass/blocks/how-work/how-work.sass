@@ -1,0 +1,234 @@
+.how-work
+  background-color: #fff
+  padding-bottom: 40px
+
+.how-work-list
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -15px
+  &__item
+    position: relative
+    z-index: 1
+    width: 33.33%
+    margin-bottom: 60px
+    padding: 0 15px
+    text-align: center
+    +r(992)
+      width: 50%
+    +r(767)
+      width: 100%
+    &::before
+      content: ''
+      position: absolute
+      left: 50%
+      top: 40px
+      z-index: -1
+      width: 400px
+      height: 20px
+      background: url('images/general/line.svg') no-repeat center / contain
+      +r(1200)
+        width: 300px
+      +r(992)
+        width: 350px
+      +r(767)
+        display: none
+    &::after
+      content: ''
+      position: absolute
+      right: -10px
+      top: 40px
+      width: 28px
+      height: 6px
+      background: url('images/general/arrow-top-right.svg') no-repeat center / contain
+      +r(767)
+        right: 48%
+        top: auto
+        bottom: -30px
+        background: url('images/general/arrow-bottom-right.svg') no-repeat center / contain
+        transform: rotate(90deg)
+    &:nth-child(2n)
+      &::before
+        transform: rotate(180deg)
+        top: 20px
+      &::after
+        background: url('images/general/arrow-bottom-right.svg') no-repeat center / contain
+    &:nth-child(1)
+      order: 1
+    &:nth-child(2)
+      order: 2
+      +r(992)
+        &::before
+          display: none
+        &::after
+          right: 47%
+          top: auto
+          bottom: -30px
+          transform: rotate(90deg)
+    &:nth-child(3)
+      order: 3
+      +r(992)
+        order: 4
+      +r(767)
+        order: 3
+      &::before
+        display: none
+        +r(992)
+          display: block
+          top: 25px
+          left: -50%
+          transform: rotate(180deg)
+        +r(767)
+          display: none
+      &::after
+        top: auto
+        bottom: -20px
+        right: 47%
+        background: url('images/general/arrow-bottom-right.svg') no-repeat center / contain
+        transform: rotate(90deg) translateX(50%)
+        +r(992)
+          top: 40px
+          right: auto
+          left: -10px
+          transform: rotate(180deg)
+        +r(767)
+          top: auto
+          bottom: -30px
+          left: 47%
+          transform: rotate(90deg)
+    &:nth-child(4)
+      order: 6
+      z-index: 3
+      +r(992)
+        order: 3
+      &::before
+        left: -50%
+        top: 40px
+        transform: rotate(0)
+        +r(992)
+          display: none
+      &::after
+        right: auto
+        left: -10px
+        transform: rotate(180deg)
+        +r(992)
+          background: url('images/general/arrow-top-right.svg') no-repeat center / contain
+          transform: rotate(90deg)
+          left: 47%
+          top: auto
+          bottom: -30px
+        +r(767)
+          background: url('images/general/arrow-bottom-right.svg') no-repeat center / contain
+    &:nth-child(5)
+      order: 5
+      z-index: 3
+      &::before
+        left: -50%
+        top: 20px
+        transform: rotate(180deg)
+        +r(992)
+          left: 50%
+          top: 40px
+          transform: none
+      &::after
+        right: auto
+        left: -10px
+        background: url('images/general/arrow-top-right.svg') no-repeat center / contain
+        transform: rotate(180deg)
+        +r(992)
+          left: auto
+          right: -10px
+          transform: none
+        +r(767)
+          right: 48%
+          top: auto
+          bottom: -30px
+          transform: rotate(90deg)
+          background: url('images/general/arrow-bottom-right.svg') no-repeat center / contain
+    &:nth-child(6)
+      order: 4
+      z-index: 5
+      +r(992)
+        order: 6
+      &::before
+        display: none
+      &::after
+        right: 46%
+        top: auto
+        bottom: -30px
+        background: url('images/general/arrow-top-right.svg') no-repeat center / contain
+        transform: rotate(90deg)
+        +r(992)
+          background: url('images/general/arrow-bottom-right.svg') no-repeat center / contain
+        +r(767)
+          right: 48%
+    &:nth-child(7)
+      order: 7
+      +r(992)
+        order: 8
+      +r(767)
+        order: 7
+      &::before
+        +r(992)
+          left: -50%
+          top: 25px
+          transform: rotate(180deg)
+      &::after
+        +r(992)
+          right: auto
+          left: -10px
+          background: url('images/general/arrow-bottom-right.svg') no-repeat center / contain
+          transform: rotate(180deg)
+        +r(767)
+          left: 47%
+          transform: rotate(90deg)
+    &:nth-child(8)
+      order: 8
+      +r(992)
+        order: 7
+      &::before
+        +r(992)
+          display: none
+      &::after
+        +r(992)
+          top: auto
+          bottom: -30px
+          right: 47%
+          background: url('images/general/arrow-top-right.svg') no-repeat center / contain
+          transform: rotate(90deg)
+        +r(767)
+          right: 48%
+          background: url('images/general/arrow-bottom-right.svg') no-repeat center / contain
+    &:nth-child(9)
+      order: 9
+      +r(767)
+        margin-bottom: 0
+      &::before
+        display: none
+      &::after
+        display: none
+  &__icon
+    @extend .competence-item__icon
+    &-wrap
+      @extend .competence-item__icon-wrap
+      margin: 0 auto 20px
+      +r(767)
+        margin: 0 auto 10px
+    &-circle
+      @extend .competence-item__icon-circle
+  &__number
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 1
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background-color: #fff
+    font-family: $din-cond-font
+    font-weight: 700
+    color: #292929
+    text-align: center
+    line-height: 30px
+  &__content
+    p
+      margin: 0

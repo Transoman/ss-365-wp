@@ -1,0 +1,33 @@
+.statistic
+  &__row
+    margin-bottom: 40px
+    +r(767)
+      margin-bottom: 0
+  &__img
+    +r(992)
+      display: none
+    img
+      box-shadow: 0 10px 60px rgba(0, 0, 0, 0.06)
+
+.statistic-item
+  margin-bottom: 35px
+  &__number
+    font-family: $din-cond-font
+    font-size: 60px
+    color: $accent
+    line-height: 0.9
+    @supports (background-clip: text)
+      background: linear-gradient($orange, $dark-orange)
+      background-clip: text
+      -webkit-text-fill-color: transparent
+  &__content
+    padding-left: 30px
+    p
+      margin: 0
+      font-size: 15px
+      font-weight: 500
+      color: #000
+      line-height: 1.6
+  &__source
+    font-size: 13px
+    font-weight: 500

@@ -1,0 +1,79 @@
+.footer
+  padding: 20px 0
+  background-color: #fff
+  .container
+    display: flex
+    align-items: center
+    +r(767)
+      flex-direction: column
+  &__col
+    &--1
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      width: 40%
+      +r(1200)
+        flex-direction: column
+        align-items: stretch
+      +r(767)
+        width: 100%
+        margin-bottom: 10px
+        text-align: center
+        order: 2
+      & > *:not(:last-child)
+        margin-right: 60px
+        +r(1200)
+          margin-right: 0
+          margin-bottom: 10px
+    &--2
+      width: 20%
+      +r(767)
+        width: 100%
+        order: 1
+        margin-bottom: 20px
+    &--3
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: flex-end
+      width: 40%
+      +r(992)
+        flex-direction: column
+        align-items: stretch
+        text-align: right
+        & > *:not(:last-child)
+          margin-bottom: 10px
+      +r(767)
+        order: 3
+        text-align: center
+        width: 100%
+      .small-contact--site
+        margin-right: 50px
+        +r(992)
+          margin-right: 0
+      .small-contact--phone
+        margin-right: 20px
+        +r(1200)
+          margin-right: 0
+  &__term
+    font-size: 16px
+    font-weight: 500
+    color: $accent
+    &:hover, &:focus
+      color: $orange
+  &__logo
+    justify-content: center
+    .logo
+      &__link
+        color: #000
+        &:hover, &:focus
+          color: $accent
+  &__city
+    +r(1200)
+      margin-top: 10px
+    +r(992)
+      margin-top: 0
+
+.dev
+  margin: 20px 0 0
+  text-align: center

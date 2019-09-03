@@ -1,0 +1,66 @@
+@import 'logo'
+@import 'small-contact'
+
+.city
+  margin: 0
+  font-size: 14px
+  font-weight: 500
+
+.link
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  font-family: $din-cond-font
+  font-size: 20px
+  font-weight: 500
+  text-transform: uppercase
+  letter-spacing: 0.04em
+  &::before
+    content: ''
+    position: absolute
+    bottom: -3px
+    left: 0
+    right: -13px
+    height: 2px
+    background-color: $accent
+  &::after
+    content: ''
+    position: absolute
+    right: -13px
+    bottom: -3px
+    width: 10px
+    height: 2px
+    background-color: $accent
+    transform: rotate(45deg)
+    transform-origin: 100% 0
+
+.swiper-button-prev,
+.swiper-button-next
+  text-align: center
+  line-height: 67px
+  background: $bg-color
+  width: 70px
+  height: 70px
+  margin-top: -35px
+  border-radius: 50%
+  +r(576)
+    width: 50px
+    height: 50px
+    margin-top: -25px
+    line-height: 47px
+  &:hover
+    svg
+      fill: $accent
+  &:focus
+    outline: none
+  svg
+    width: 20px
+    height: 14px
+    fill: $bd-color
+    +trans
+    +r(767)
+      fill: $accent
+.swiper-button-prev
+  left: 0
+.swiper-button-next
+  right: 0

@@ -1,0 +1,71 @@
+.portfolio
+  padding-bottom: 30px
+  +r(992)
+    padding-bottom: 60px
+  .section-header
+    margin-bottom: 30px
+    +r(767)
+      margin-bottom: 10px
+
+.portfolio-slider
+  &__item
+    display: flex
+    padding: 50px 100px
+    +r(992)
+      display: block
+      padding: 50px 0 0
+    +r(767)
+      padding-top: 20px
+  &__img
+    flex-shrink: 0
+    width: 370px
+    margin-right: 40px
+    +r(1200)
+      width: 300px
+    +r(992)
+      width: 250px
+      margin: 0 auto 30px
+    +r(767)
+      margin-bottom: 20px
+    img
+      box-shadow: 0 10px 60px rgba(0, 0, 0, 0.06)
+      +r(767)
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06)
+  &__info
+    flex-grow: 1
+    &-item
+      display: flex
+      align-items: flex-start
+      padding: 20px 0
+      border-bottom: 1px solid $bd-color
+      +r(767)
+        padding: 10px 0
+      &:last-child
+        border: 0
+    &-icon
+      width: 54px
+      height: 54px
+      fill: url(#gradient)
+      +r(767)
+        width: 24px
+        height: 24px
+      &-wrap
+        width: 54px
+        height: 54px
+        margin-right: 15px
+        +r(767)
+          width: 24px
+          height: 24px
+    &-title
+      display: block
+      margin-bottom: 10px
+      font-weight: 500
+      color: #292929
+      +r(767)
+        margin-bottom: 5px
+  .swiper-button-next,
+  .swiper-button-prev
+    +r(992)
+      top: 25%
+    +r(576)
+      top: 190px

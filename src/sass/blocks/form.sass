@@ -1,0 +1,60 @@
+.form-group
+  position: relative
+  margin-bottom: 15px
+  &--btn
+    margin-bottom: 0
+.form-field
+  width: 100%
+  padding: 13px 20px
+  border: 1px solid $bd-color
+  border-radius: 22px
+  font-size: 13px
+  box-shadow: none
+  appearance: none
+  +trans
+  &::placeholder
+    color: inherit
+  &:focus
+    outline: none
+    border-color: $accent
+.form-label
+  display: block
+  margin: 0
+  font-size: 15px
+  font-weight: 500
+  color: #000
+  .form-field
+    margin-top: 5px
+.form-row
+  +rmin(992)
+    display: flex
+    align-items: flex-end
+    .form-group
+      flex: 1 0
+      margin-right: 70px
+      margin-bottom: 0
+      &:last-child
+        margin-right: 0
+
+textarea.form-field
+  height: 85px
+
+.btn-loading
+  &::before
+    content: ''
+    position: relative
+    display: inline-block
+    vertical-align: top
+    width: 18px
+    height: 18px
+    margin-top: 2px
+    margin-right: 10px
+    bottom: auto
+    left: auto
+    opacity: 1
+    border-radius: 50%
+    border: 3px solid transparent
+    border-top: 3px solid rgba(255, 255, 255, 1)
+    border-right: 3px solid rgba(255, 255, 255, 1)
+    background: transparent
+    animation: 0.5s spin cubic-bezier(0.4, 0, 0.2, 1) infinite

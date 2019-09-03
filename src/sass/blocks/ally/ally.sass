@@ -1,0 +1,53 @@
+.ally
+  background-color: #fff
+  &__img
+    text-align: right
+    +r(992)
+      display: none
+    img
+      box-shadow: 0 10px 60px rgba(0, 0, 0, 0.06)
+  &__row
+    margin-bottom: 80px
+    +r(767)
+      margin-bottom: 10px
+
+.ally-list
+  position: relative
+  height: 100%
+  margin: 0
+  padding: 0
+  list-style: none
+  +r(992)
+    margin-bottom: 30px
+    height: auto
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    width: 30px
+    background-image: linear-gradient($orange, $dark-orange)
+    border-radius: 2px
+  li
+    position: relative
+    margin-bottom: 30px
+    padding-left: 60px
+    font-size: 20px
+    font-weight: 500
+    line-height: 1.5
+    color: $dark
+    +r(767)
+      font-size: 18px
+    &:last-child
+      margin-bottom: 0
+    &::before
+      content: ''
+      position: absolute
+      left: 10px
+      top: 50%
+      transform: translateY(-50%)
+      width: 8px
+      height: 8px
+      border: 2px solid #fff
+      border-radius: 50%
