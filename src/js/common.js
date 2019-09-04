@@ -53,7 +53,6 @@ jQuery(document).ready(function($) {
 
   new Swiper('.portfolio-slider', {
     spaceBetween: 70,
-    autoHeight: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

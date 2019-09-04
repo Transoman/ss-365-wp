@@ -588,7 +588,7 @@ get_header(); ?>
 <?php $args = array(
   'post_type' => 'portfolio',
   'posts_per_page' => -1,
-  'orderby' => 'DESC'
+  'order' => 'ASC'
 );
 
 $query = new WP_Query( $args );
